@@ -373,6 +373,17 @@ section.s{padding-block:44px 8px}
 .pk2 div{background:var(--surface2);border-radius:12px;padding:12px 14px}
 .pk2 b{display:block;font-size:22px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 .pk2 span{display:block;font-size:13px;color:var(--ink2);margin-top:4px;line-height:1.35}
+/* implementation track */
+.stick{display:grid;gap:10px}
+@media(min-width:700px){.stick{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1020px){.stick{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.sk{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;background:var(--surface);display:flex;flex-direction:column}
+.sk small{display:block;font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.sk b{display:block;font-size:17px;font-weight:800;line-height:1.2}
+.sk p{font-size:13.5px;color:var(--ink2);margin:6px 0 10px;line-height:1.4}
+.sk .bs{margin-top:auto;align-self:flex-start}
+.sk.key{background:var(--accent-soft);border-color:var(--accent)}
+.sk.key small{color:var(--accent)}
 /* ladder and format */
 .ladder,.fmt3{display:grid;gap:10px}
 @media(min-width:860px){.ladder{grid-template-columns:repeat(4,minmax(0,1fr))}.fmt3{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -504,6 +515,16 @@ section.s{padding-block:44px 8px}
       <div class="fm"><small>After</small><b>Live roundtable</b><p>A follow-up with faculty, so the skills show up in the practice.</p></div>
     </div>
     <p class="calnote">Groups have asked for a workshop with an online program and a roundtable attached. Endo is the closest to that today. For every other course the online piece still has to be built or refined.</p>
+    <div class="sh" style="margin-top:34px"><div><p class="eyebrow">Proposed, not on offer yet</p><h2>After the room: making it stick</h2><p class="note">The live days are where a skill gets learned. The 90 days after are where it shows up in production. The proposal is that every road room comes with an implementation track, so the doctor, the team and the group all leave with a plan.</p></div></div>
+    <div class="stick">
+      <div class="sk"><small>Day 1</small><b>A 90-day plan</b><p>Each doctor leaves with three cases to do in the next 30 days and targets for 60 and 90 days.</p><i class="bs ready">In the front door course</i></div>
+      <div class="sk"><small>For the office</small><b>The team kit</b><p>Scripts, patient education pieces and case presentation templates for the front desk and the treatment coordinator, so the whole office helps the patient say yes, not just the doctor.</p><i class="bs build">To build</i></div>
+      <div class="sk"><small>Monthly</small><b>Faculty follow-up</b><p>A live roundtable and case submission, so doctors get feedback on their first real cases.</p><i class="bs ready">Closest for endo</i></div>
+      <div class="sk"><small>For the group</small><b>The group lead's playbook</b><p>A one-page guide for the group's clinical director: how to support each doctor after the course, what to watch for, and when to step in.</p><i class="bs build">To build</i></div>
+      <div class="sk key"><small>Day 90</small><b>The 90-day scorecard</b><p>Before and after numbers for each doctor: procedures done in-house against referred out, case acceptance, and production on that course's procedures. This is what shows the group its return.</p><i class="bs build">To build</i></div>
+      <div class="sk"><small>Any time</small><b>Online library</b><p>Spear's online content mapped to each course, so the doctor knows what to watch next.</p><i class="bs concept">Content exists, to map</i></div>
+    </div>
+    <p class="calnote">Status: the roundtable is closest for endo today. The scorecard, the team kit and the playbook still need to be built.</p>
     <div class="sh" style="margin-top:34px"><div><p class="eyebrow">Value</p><h2>What the rooms are worth</h2></div></div>
     <div class="money" id="money"></div>
     <p class="calnote" id="moneynote"></p>
@@ -918,6 +939,7 @@ function renderDecisions(){
     ['Price for the aligner course', 'Every other course has a price. The aligner course does not, so track totals leave it out.'],
     ["Is Dr. Bell's course the front door of the ECA?", 'The ECA is a separate program and is being updated. It is not decided whether the front door course becomes part of it. This plan works either way.'],
     ['ECA crown prep format', 'The at-home crown prep in the ECA needs a deadline. One option is a scan submitted by a due date with a score back, with AI feedback piloted and faculty spot checks. Timed repetition would then happen live, at the ECA workshop or the Restorative Growth Accelerator.'],
+    ['An owner for the implementation track', 'The 90-day scorecard, the team kit and the group playbook are not built. Name who builds them and with what people, and decide the smallest version that ships with the first rooms. The scorecard comes first, because it is what shows a group its return.'],
     ['The online wrap for each room', 'Groups ask for a workshop with online learning before and a live roundtable after. Endo is closest to that today. Decide which other courses get it in 2027 and who builds it.'],
     ['A room for implants', 'The implant course is ready to sell and has no room in this plan. Decide whether it gets a 2027 road date, and where. Sleep is a concept only and is not built yet.'],
     ['Confirm the 200-level list', "Spear and CDOCS publish no course levels. The calendar's 200-level cut is our read, and Education should confirm it."]
